@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Layout from '../components/Layout'
+import 'bootstrap/dist/css/bootstrap.css';
 
 const AboutPage = () => (
   <Layout title="About | Next.js + TypeScript Example">
