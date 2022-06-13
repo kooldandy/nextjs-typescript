@@ -15,15 +15,18 @@ const Layout = ({ children, title }: Props) => {
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="JavaScript wizard, chaotic good" />
+        <meta name="keyword" content="portfolio, javascript, developer" />
       </Head>
       <div className="app-container">
         <header>
           <AppNavbar />
         </header>
-        <main>{children}</main>
-
+        <main className="main">
+          {children}
+        </main>
         <footer>
-          <AppFooter/>
+          <AppFooter />
         </footer>
       </div>
     </>

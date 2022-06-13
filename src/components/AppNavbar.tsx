@@ -1,13 +1,9 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import {
-  Button,
   Container,
-  Form,
-  FormControl,
   Nav,
   Navbar,
-  NavDropdown,
   Offcanvas,
 } from "react-bootstrap";
 
@@ -22,8 +18,9 @@ const AppNavbar = () => {
     <>
       <Navbar
         bg="dark"
+        fixed="top"
         variant="dark"
-        expand="md"
+        expand="lg"
         className="mb-3"
         expanded={expanded}
         onToggle={() => setExpanded(!expanded)}

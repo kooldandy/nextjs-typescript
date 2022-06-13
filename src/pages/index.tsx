@@ -28,7 +28,7 @@ const IndexPage = () => {
     <>
       <Fade>
         <div style={mainContainer}>
-          <h1 style={styles.nameStyle} className="home-header text-sm-start">{name}</h1>
+          <h1 style={styles.nameStyle} className="home-header">{name}</h1>
           <div style={{ flexDirection: 'row' }}>
             <h2 style={styles.inlineChild}>I&apos;m&nbsp;</h2>
             <Typewriter
