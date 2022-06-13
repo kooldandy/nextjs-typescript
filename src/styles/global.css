@@ -71,7 +71,13 @@ main {
   font-weight: bold;
   color: rgb(220, 56, 56);
 }
-
+a.fs-5.app-nav-link.nav-link{
+  cursor: default;
+  padding: 0;
+}
+.app-nav-link:hover{
+  cursor: default;
+}
 .app-nav-link a {
   padding: 0 1rem;
   width: 100%;
