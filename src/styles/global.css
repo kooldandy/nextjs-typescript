@@ -50,10 +50,11 @@ a:hover {
   top: -4px;
 }
 
-main {
+.main {
   height: 100%;
   margin-top: 5rem;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .Typewriter {

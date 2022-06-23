@@ -62,9 +62,9 @@ const AppNavbar = () => {
                 <Nav.Link
                   onClick={onSelectNav}
                   className="fs-5 app-nav-link"
-                  eventKey="users"
+                  eventKey="skills"
                 >
-                  <Link href="/users">Users List</Link>
+                  <Link href="/skills">Skills</Link>
                 </Nav.Link>
 
                 <Nav.Link

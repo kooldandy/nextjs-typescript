@@ -34,7 +34,7 @@ const AboutPage = () => {
             <Col style={styles.introImageContainer}>
               <Image
                 src={profilePic}
-                alt="Picture of the developer"
+                alt="Saurabh Ghosh"
                 priority
                 placeholder="blur" // Optional blur-up while loading
               />
