@@ -70,26 +70,19 @@ const AppNavbar = () => {
                 <Nav.Link
                   onClick={onSelectNav}
                   className="fs-5 app-nav-link"
-                  eventKey="users"
+                  eventKey="experience"
                 >
-                  <Link href="/users">Users List</Link>
+                  <Link href="/experience">Experience</Link>
                 </Nav.Link>
 
-                <Nav.Link
+                {/* <Nav.Link
                   onClick={onSelectNav}
                   className="fs-5 app-nav-link"
                   eventKey="users"
                 >
                   <Link href="/users">Users List</Link>
-                </Nav.Link>
+                </Nav.Link> */}
 
-                <Nav.Link
-                  onClick={onSelectNav}
-                  className="fs-5 app-nav-link"
-                  eventKey="users"
-                >
-                  <Link href="/users">Users List</Link>
-                </Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

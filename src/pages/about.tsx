@@ -52,7 +52,7 @@ const AboutPage = () => {
 };
 
 AboutPage.getTitle = () => {
-  return "About | Next.js + TypeScript Example";
+  return "About";
 };
 
 export default AboutPage;

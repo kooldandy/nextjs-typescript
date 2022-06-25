@@ -40,7 +40,7 @@ const IndexPage = () => {
 };
 
 IndexPage.getTitle = () => {
-  return "Home | Next.js + TypeScript Example";
+  return "Home | Saurabh Ghosh";
 };
 
 export default IndexPage;

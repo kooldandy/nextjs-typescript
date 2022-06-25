@@ -99,6 +99,10 @@ const SkillsPage = () => {
             icon: "/images/skills/gulp.png",
             title: "Gulp",
           },
+          {
+            icon: "/images/skills/sass.png",
+            title: "Sass",
+          },
         ],
       },
       {
