@@ -1,0 +1,11 @@
+User-agent: Googlebot
+Disallow: /_next*
+Allow: /
+
+User-agent: Googlebot-Image
+Disallow: /_next*
+Allow: /
+
+User-agent: Googlebot-Mobile
+Disallow: /_next*
+Allow: /
