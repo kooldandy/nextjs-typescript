@@ -20,6 +20,7 @@ const Layout = ({ children, title }: Props) => {
         <meta name="google-site-verification" content="8tgXHJZWj0MPdU6K0a20rKKFmqDDbFCrZDZEggjLwxc" />
         <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
         <meta name='googlebot' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <script src="/js/google-tag-manager.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLVBW5WRGX"></script>
         <script src="/js/google-analytics.js"></script>
       </Head>
