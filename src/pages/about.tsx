@@ -5,7 +5,7 @@ import profilePic from "../../public/me.jpg";
 
 const AboutPage = () => {
   const about1 =
-    "I'm a Senior Software Enginner at EPAM Systems, originally from Varanasi, India.";
+    "I'm a Senior Software Enginner at Nagarro, originally from Varanasi, India.";
   const about2 =
     "My areas of interest lie in Frontend Development, Web developement, UI automation and DevOps. I have experience building enterprise grade WebApps and scalable frontend architectures.";
   const about3 =
