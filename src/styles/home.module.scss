@@ -1,0 +1,44 @@
+@mixin headerContent {
+  color: green;
+  position: relative;
+  top: -4px;
+}
+.homeContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &Header {
+    font-size: 5rem;
+    font-stretch: extra-condensed;
+
+    &::before {
+      content: "{ ";
+      @include headerContent;
+    }
+
+    &::after {
+      content: " }";
+      @include headerContent;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 4rem;
+
+      &::after,
+      &::before {
+        display: block;
+      }
+    }
+  }
+
+  .homeContent {
+    font-family: monospace;
+
+    &Header {
+      display: inline-block;
+    }
+  }
+}

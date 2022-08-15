@@ -1,0 +1,10 @@
+.skills {
+  &Intro {
+    white-space: pre-wrap;
+  }
+
+  &Image {
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
