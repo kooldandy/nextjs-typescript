@@ -1,0 +1,20 @@
+// bootstarp nav is overridden
+
+a.fs-5.app-nav-link.nav-link {
+  cursor: default;
+  padding: 0;
+}
+.app-nav-link:hover {
+  cursor: default;
+}
+.app-nav-link a {
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.app-nav-link a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(222, 42, 174) !important;
+  -webkit-text-decoration-color: rgb(222, 42, 174) !important;
+  text-underline-offset: 5px;
+}

@@ -1,0 +1,21 @@
+// Typewriter component(3rd party) css is getting overridden
+@mixin typewriter-effect {
+  font-size: xx-large;
+  font-weight: bold;
+  color: rgb(220, 56, 56);
+}
+
+.Typewriter {
+  display: inline-block;
+
+  .Typewriter__wrapper {
+    @include typewriter-effect;
+    letter-spacing: -2px;
+  }
+  
+  .Typewriter__cursor {
+    @include typewriter-effect;
+  }
+}
+
+
