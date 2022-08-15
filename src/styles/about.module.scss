@@ -1,0 +1,19 @@
+.about {
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+  }
+
+  .introImageContainer {
+    margin: 10;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .introTextContainer {
+    margin: 0 10px;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}

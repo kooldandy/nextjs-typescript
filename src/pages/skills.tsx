@@ -1,18 +1,9 @@
 import { Container } from "react-bootstrap";
 import Fade from "react-reveal";
 import Image from "next/image";
+import styles from '../styles/skills.module.scss';
 
 const SkillsPage = () => {
-  const styles = {
-    iconStyle: {
-      borderRadius: 20,
-    },
-    introTextContainer: {
-      whiteSpace: "pre-wrap" as "pre-wrap",
-    },
-  };
-
-
   const data = {
     intro:
       "I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with:",
@@ -185,7 +176,7 @@ const SkillsPage = () => {
       <Fade>
         <h1>Skills</h1>
         <Container>
-          <h4 style={styles.introTextContainer}>{data.intro}</h4>
+          <h4 className={styles.skillsIntro}>{data.intro}</h4>
           {data.skills?.map((rows) => (
             <div key={rows.title}>
               <br />
@@ -193,14 +184,14 @@ const SkillsPage = () => {
               {rows.items.map((item) => (
                 <div
                   key={item.title}
-                  style={{ display: "inline-block", margin: "0 5px" }}
+                  className={styles.skillsImage}
                 >
                   <Image
                     src={item.icon}
                     alt={item.title}
                     height={75}
                     width={75}
-                    style={styles.iconStyle}
+                    style={{borderRadius: 20}}
                   />
                   <p>{item.title}</p>
                 </div>
