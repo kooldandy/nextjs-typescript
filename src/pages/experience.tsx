@@ -55,12 +55,6 @@ const ExperiencePage = () => {
     ],
   };
 
-  const styles = {
-    iconStyle: {
-      borderRadius: 50,
-    },
-  };
-
   return (
     <>
       <h1>Experience</h1>
@@ -84,7 +78,7 @@ const ExperiencePage = () => {
                   alt={item.title}
                   height={75}
                   width={75}
-                  style={styles.iconStyle}
+                  style={{borderRadius: 50}}
                 />}
               >
                 <span className="position-absolute top-0 end-0 mx-2 mb-2 text-muted">{item.location}</span>
