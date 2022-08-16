@@ -1,17 +1,24 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react'
+import { render, screen, cleanup } from '@testing-library/react'
 import Home from '@/pages/index'
 
 describe('Home', () => {
-  it('renders a heading', () => {
-    render(<Home />)
+  beforeEach(() =>{
+    render(<Home />);
+  })
+  
+  afterEach(() => {
+    cleanup();
+  });
 
-    const renderApp = () => render(<Home/>);
+  it('renders the heading H1', () =>{
+    const h1 = screen.getByText('SAURABH GHOSH');
+    expect(h1).toBeInTheDocument()
+  })
 
-    const heading = screen.getByRole('heading', {
-      name: /SAURABH GHOSH/i,
-    })
+  it('renders the heading H2', () =>{
+    const h2 = screen.getByText("I'm");
 
-    expect(heading).toBeInTheDocument()
+    expect(h2).toBeInTheDocument()
   })
 })
