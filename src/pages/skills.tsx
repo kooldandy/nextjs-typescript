@@ -1,7 +1,6 @@
 import { Container } from "react-bootstrap";
-import Fade from "react-reveal";
 import Image from "next/image";
-import styles from '../styles/skills.module.scss';
+import styles from "../styles/skills.module.scss";
 
 const SkillsPage = () => {
   const data = {
@@ -173,33 +172,28 @@ const SkillsPage = () => {
 
   return (
     <>
-      <Fade>
-        <h1>Skills</h1>
-        <Container>
-          <h4 className={styles.skillsIntro}>{data.intro}</h4>
-          {data.skills?.map((rows) => (
-            <div key={rows.title}>
-              <br />
-              <h5>{rows.title}</h5>
-              {rows.items.map((item) => (
-                <div
-                  key={item.title}
-                  className={styles.skillsImage}
-                >
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    height={75}
-                    width={75}
-                    style={{borderRadius: 20}}
-                  />
-                  <p>{item.title}</p>
-                </div>
-              ))}
-            </div>
-          ))}
-        </Container>
-      </Fade>
+      <h1>Skills</h1>
+      <Container>
+        <h4 className={styles.skillsIntro}>{data.intro}</h4>
+        {data.skills?.map((rows) => (
+          <div key={rows.title}>
+            <br />
+            <h5>{rows.title}</h5>
+            {rows.items.map((item) => (
+              <div key={item.title} className={styles.skillsImage}>
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  height={75}
+                  width={75}
+                  style={{ borderRadius: 20 }}
+                />
+                <p>{item.title}</p>
+              </div>
+            ))}
+          </div>
+        ))}
+      </Container>
     </>
   );
 };
