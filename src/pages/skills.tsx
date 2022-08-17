@@ -1,9 +1,9 @@
-import { Container } from "react-bootstrap";
-import Image from "next/image";
-import styles from "../styles/skills.module.scss";
+import Skills from "@components/templates/Skills";
+
 
 const SkillsPage = () => {
   const data = {
+    heading: 'Skills',
     intro:
       "I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with:",
     skills: [
@@ -171,30 +171,7 @@ const SkillsPage = () => {
   };
 
   return (
-    <>
-      <h1>Skills</h1>
-      <Container>
-        <h4 className={styles.skillsIntro}>{data.intro}</h4>
-        {data.skills?.map((rows) => (
-          <div key={rows.title}>
-            <br />
-            <h5>{rows.title}</h5>
-            {rows.items.map((item) => (
-              <div key={item.title} className={styles.skillsImage}>
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  height={75}
-                  width={75}
-                  style={{ borderRadius: 20 }}
-                />
-                <p>{item.title}</p>
-              </div>
-            ))}
-          </div>
-        ))}
-      </Container>
-    </>
+   <Skills heading={data.heading} intro={data.intro} skills={data.skills}/>
   );
 };
 
