@@ -29,6 +29,8 @@ export interface IImage{
   height?: number;
   width?: number;
   style?: any;
+  priority?: boolean;
+  placeholder?: 'blur' | 'empty';
 }
 
 export interface IHome{

@@ -8,7 +8,7 @@ const Home: FC<IHome> = (props: IHome) => {
   const { name, data, roles } = props;
   return (
     <>
-      <div className={styles.homeContainer}>
+      <div className={`${styles.homeContainer} h-100 d-flex flex-column justify-content-center align-items-center`}>
         <Heading type={HeadingEnum.H1} className={styles.homeContainerHeader}>
           {name}
         </Heading>

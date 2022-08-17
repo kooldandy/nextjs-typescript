@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 import Image from "@components/atoms/Image";
 import styles from "@styles/skills.module.scss";
 import { ISkills } from "@interfaces/index";
-import { interpolateAs } from "next/dist/shared/lib/router/router";
 
 const Skills: FC<ISkills> = (props: ISkills) => {
   const { heading, intro, skills } = props;
