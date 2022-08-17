@@ -4,7 +4,51 @@
 //
 // import { User } from 'path/to/interfaces';
 
-export type User = {
-  id: number
-  name: string
+import { StaticImageData } from "next/image";
+import { ReactNode } from "react";
+export interface IAbout {
+  heading: string;
+  about: string[];
+  profilePic: StaticImageData;
+}
+
+export enum HeadingEnum {
+  H1 = "h1",
+  H2 = "h2",
+}
+export interface IHeading {
+  type: HeadingEnum;
+  children: ReactNode;
+  className?: string;
+}
+
+
+export interface IImage{
+  src: StaticImageData | string;
+  alt?: string;
+  height?: number;
+  width?: number;
+  style?: any;
+  priority?: boolean;
+  placeholder?: 'blur' | 'empty';
+}
+
+export interface IHome{
+  name: string;
+  data: string;
+  roles: string[];
+}
+
+type skill = {
+  title: string;
+  items: {
+    icon: string;
+    title: string;
+  }[]
+}
+
+export interface ISkills{
+  heading: string;
+  intro: string;
+  skills: skill[];
 }
