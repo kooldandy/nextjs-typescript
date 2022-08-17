@@ -3,9 +3,9 @@ import NextImage from "next/image";
 import { IImage } from '@interfaces/index';
 
 const Image: FC<IImage> = (props: IImage) => {
-    const {src, alt, height, width, style, priority= false, placeholder="empty"} = props;
+    const {src, alt, height, width, style, priority= false, placeholder="empty", caption} = props;
   return (
-    <>
+    <figure>
         <NextImage
             layout='fixed'
               src={src}
@@ -16,7 +16,8 @@ const Image: FC<IImage> = (props: IImage) => {
               width={width}
               style={style}
             />
-    </>
+        {caption && <figcaption>{caption}</figcaption>}
+    </figure>
   )
 }
 

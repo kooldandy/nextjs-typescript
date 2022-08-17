@@ -12,8 +12,8 @@ const Home: FC<IHome> = (props: IHome) => {
         <Heading type={HeadingEnum.H1} className={styles.homeContainerHeader}>
           {name}
         </Heading>
-        <div className={styles.homeContent}>
-          <Heading type={HeadingEnum.H2} className={styles.homeContentHeader}>
+        <div className="d-flex font-monospace">
+          <Heading type={HeadingEnum.H4} className="mt-1">
             {data}&nbsp;
           </Heading>
           <Typewriter

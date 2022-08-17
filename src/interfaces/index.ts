@@ -15,6 +15,9 @@ export interface IAbout {
 export enum HeadingEnum {
   H1 = "h1",
   H2 = "h2",
+  H3 = "h3",
+  H4 = "h4",
+  H5 = "h5",
 }
 export interface IHeading {
   type: HeadingEnum;
@@ -31,6 +34,7 @@ export interface IImage{
   style?: any;
   priority?: boolean;
   placeholder?: 'blur' | 'empty';
+  caption?: string;
 }
 
 export interface IHome{
