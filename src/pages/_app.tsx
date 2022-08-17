@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../components/templates/Layout";
 import type { AppProps } from "next/app";
 import type { NextPage } from "next";
 import "../styles/global.scss";

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
-import AppNavbar from "./AppNavbar";
-import AppFooter from "./AppFooter";
+import AppNavbar from "@components/organisms/AppNavbar";
+import AppFooter from "@components/organisms/AppFooter";
 
 type Props = {
   children?: ReactNode;

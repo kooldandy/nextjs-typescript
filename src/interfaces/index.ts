@@ -4,7 +4,24 @@
 //
 // import { User } from 'path/to/interfaces';
 
-export type User = {
-  id: number
-  name: string
+import { StaticImageData } from "next/image";
+import { ReactNode } from "react";
+export interface IAbout {
+  heading: string;
+  about: {
+    para1: string;
+    para2: string;
+    para3: string;
+  };
+  profilePic: string | StaticImageData;
+}
+
+export enum HeadingEnum {
+  H1 = "h1",
+  H2 = "h2",
+}
+export interface IHeading {
+  type: HeadingEnum;
+  children: ReactNode;
+  className?: string;
 }
