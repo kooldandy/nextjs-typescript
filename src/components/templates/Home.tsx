@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import styles from "@styles/home.module.scss";
 import Heading from "@components/atoms/Heading";
-import { HeadingEnum, IHOme } from "@interfaces/index";
+import { HeadingEnum, IHome } from "@interfaces/index";
 import Typewriter from "typewriter-effect";
 
-const Home: FC<IHOme> = (props: IHOme) => {
+const Home: FC<IHome> = (props: IHome) => {
   const { name, data, roles } = props;
   return (
     <>

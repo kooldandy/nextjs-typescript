@@ -24,12 +24,29 @@ export interface IHeading {
 
 
 export interface IImage{
-  src: StaticImageData;
+  src: StaticImageData | string;
   alt?: string;
+  height?: number;
+  width?: number;
+  style?: any;
 }
 
-export interface IHOme{
+export interface IHome{
   name: string;
   data: string;
   roles: string[];
+}
+
+type skill = {
+  title: string;
+  items: {
+    icon: string;
+    title: string;
+  }[]
+}
+
+export interface ISkills{
+  heading: string;
+  intro: string;
+  skills: skill[];
 }
