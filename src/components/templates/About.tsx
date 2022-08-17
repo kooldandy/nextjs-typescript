@@ -1,31 +1,32 @@
 import React, { FC } from "react";
 import { Container, Col, Row } from "react-bootstrap";
-import Image from "next/image";
 import styles from "@/styles/about.module.scss";
 import { HeadingEnum, IAbout } from "../../interfaces";
 import Heading from "@components/atoms/Heading";
+import Image from "@components/atoms/Image";
 
 const About: FC<IAbout> = (props: IAbout) => {
   const { heading, about, profilePic } = props;
   return (
     <>
-      <Heading type={HeadingEnum.H1}>{heading}</Heading>
       <Container>
+        <Row>
+          <Heading type={HeadingEnum.H1}>{heading}</Heading>
+        </Row>
         <Row
           className={`${styles.about} mt-5 d-flex flex-wrap justify-content-center`}
         >
           <Col className={styles.introImageContainer}>
-            <Image
-              src={profilePic}
-              alt="Saurabh Ghosh"
-              priority
-              placeholder="blur" // Optional blur-up while loading
-            />
+            <Image src={profilePic} alt="Saurabh Ghosh" />
           </Col>
           <Col className={styles.introTextContainer}>
-            <p className="px-3">{about.para1}</p>
-            <p className="px-3">{about.para2}</p>
-            <p className="px-3">{about.para3}</p>
+            {about.map((data) => {
+              return (
+                <article key={data} className="mt-2">
+                  <p className="px-3">{data}</p>
+                </article>
+              );
+            })}
           </Col>
         </Row>
       </Container>

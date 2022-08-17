@@ -8,12 +8,8 @@ import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 export interface IAbout {
   heading: string;
-  about: {
-    para1: string;
-    para2: string;
-    para3: string;
-  };
-  profilePic: string | StaticImageData;
+  about: string[];
+  profilePic: StaticImageData;
 }
 
 export enum HeadingEnum {
@@ -24,4 +20,16 @@ export interface IHeading {
   type: HeadingEnum;
   children: ReactNode;
   className?: string;
+}
+
+
+export interface IImage{
+  src: StaticImageData;
+  alt?: string;
+}
+
+export interface IHOme{
+  name: string;
+  data: string;
+  roles: string[];
 }
