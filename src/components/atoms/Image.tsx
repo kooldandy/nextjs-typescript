@@ -3,11 +3,11 @@ import NextImage from "next/image";
 import { IImage } from '@interfaces/index';
 
 const Image: FC<IImage> = (props: IImage) => {
-    const {src, alt, height, width, style, priority= false, placeholder="empty", caption} = props;
+    const {src, alt, height, width, style, layout="fixed", priority= false, placeholder="empty", caption} = props;
   return (
     <figure>
         <NextImage
-            layout='fixed'
+              layout={layout}
               src={src}
               alt={alt}
               priority={priority}

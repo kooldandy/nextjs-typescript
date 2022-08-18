@@ -25,34 +25,49 @@ export interface IHeading {
   className?: string;
 }
 
-
-export interface IImage{
+export interface IImage {
   src: StaticImageData | string;
   alt?: string;
   height?: number;
   width?: number;
   style?: any;
   priority?: boolean;
-  placeholder?: 'blur' | 'empty';
+  placeholder?: "blur" | "empty";
   caption?: string;
+  layout?: "fixed" | "fill" | "intrinsic" | "responsive" | "raw";
 }
 
-export interface IHome{
+export interface IHome {
   name: string;
   data: string;
   roles: string[];
 }
 
-type skill = {
+type skillType = {
   title: string;
   items: {
     icon: string;
     title: string;
-  }[]
-}
+  }[];
+};
 
-export interface ISkills{
+export interface ISkills {
   heading: string;
   intro: string;
-  skills: skill[];
+  skills: skillType[];
+}
+
+type experienceType = {
+  title: string;
+  company: string;
+  location: string;
+  website: string;
+  dateText: string;
+  icon: string;
+  workDescription: string[];
+  technology?: string[];
+};
+export interface IExperience {
+  heading: string;
+  experience: experienceType[];
 }
