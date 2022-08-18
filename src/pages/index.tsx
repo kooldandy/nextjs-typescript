@@ -1,17 +1,30 @@
 import Home from "@components/templates/Home";
+import { ApiNameEnum, IHome } from "@interfaces/index";
+import loadData from "@utils/fetch";
 
-const IndexPage = () => {
-  const name = `SAURABH GHOSH`;
-  const roles = ["a Javascript Developer", "a Blogger"];
-  const data = "I'm";
-
+const IndexPage = (props: IHome) => {
   return (
-    <Home name={name} data={data} roles={roles}/>
+    <Home {...props}/>
   );
 };
 
 IndexPage.getTitle = () => {
   return "Home | Saurabh Ghosh";
 };
+
+// This function gets called at build time on server-side.
+// It won't be called on client-side, so you can even do
+// direct database queries.
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  const data = await loadData(ApiNameEnum.HOME);
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: data
+  }
+}
 
 export default IndexPage;
