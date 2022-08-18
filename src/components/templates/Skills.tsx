@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Image from "@components/atoms/Image";
 import styles from "@styles/skills.module.scss";
 import { HeadingEnum, ISkills } from "@interfaces/index";
