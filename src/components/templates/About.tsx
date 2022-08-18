@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import styles from "@styles/about.module.scss";
-import { HeadingEnum, IAbout } from "../../interfaces";
+import { HeadingEnum, IAbout } from "@interfaces/index";
 import Heading from "@components/atoms/Heading";
 import Image from "@components/atoms/Image";
 
