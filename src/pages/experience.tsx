@@ -1,14 +1,28 @@
-import { Container } from "react-bootstrap";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import Image from "next/image";
+import Experience from "@components/templates/Experience";
 
 const ExperiencePage = () => {
   const data = {
+    heading: "Experience",
     experiences: [
+      {
+        title: "Associate Staff Engineer",
+        company: "Nagarro",
+        location: "Lucknow",
+        website: "https://www.nagarro.com/en",
+        dateText: "July 2022 - till now",
+        icon: "/images/company/nagarro.jpg",
+        workDescription: [
+          "Participated in client meetings - Analyzing their needs, provide technical solutions and setup estimates.",
+          "Technical analysis and time estimates.",
+          "Architect and build web based solutions based on client needs.",
+          "Setup initial project structure and dependencies.",
+          "Setup specific workflows - formatting and linting rules etc.",
+          "Train new team memebers"
+        ],
+        technology:[
+          'ReactJs', 'Typescript', 'NextJs', 'Atomic-Design', 'Bootstrap'
+        ]
+      },
       {
         title: "Senior Software Engineer",
         company: "EPAM Systems",
@@ -22,6 +36,9 @@ const ExperiencePage = () => {
           "Conduct code review to ensure the work delivered by the team is of high quality standards.",
           "Taking technical interviews also mentoring the junior developers.",
         ],
+        technology:[
+          'ReactJs', 'Typescript', 'Angular', 'Webpack', 'Cypress'
+        ]
       },
       {
         title: "Manager(Application Developer)",
@@ -37,6 +54,9 @@ const ExperiencePage = () => {
           "Communicated updates in daily scrum meetings using JIRA software.",
           "Rewrite the existing code.",
         ],
+        technology:[
+          'Typescript', 'Angular', 'Bootstrap', 'Karma', 'Jasmine'
+        ]
       },
       {
         title: "Systems Engineer",
@@ -50,55 +70,16 @@ const ExperiencePage = () => {
           "Worked on TCS BANCS a Core Banking platform enhances the basic business of banking.",
           "Requirement gathering, analysis of the requirements.",
         ],
+        technology:[
+          'AngularJs', 'ES6', 'HTML5', 'CSS3', 'SDLC'
+        ]
       },
     ],
   };
 
   return (
     <>
-      <h1>Experience</h1>
-      <Container>
-        <VerticalTimeline lineColor={"#ddd"}>
-          {data.experiences.map((item) => (
-            <VerticalTimelineElement
-              key={item.title + item.dateText}
-              className="vertical-timeline-element--work"
-              contentStyle={{
-                borderTop: "5px solid rgb(33, 150, 243)",
-                color: "#000",
-              }}
-              contentArrowStyle={{
-                borderRight: "7px solid  rgb(33, 150, 243)",
-              }}
-              date={item.dateText}
-              icon={
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  height={75}
-                  width={75}
-                  style={{ borderRadius: 50 }}
-                />
-              }
-            >
-              <span className="position-absolute top-0 end-0 mx-2 mb-2 text-muted">
-                {item.location}
-              </span>
-              <h2 className="vertical-timeline-element-title">{item.title}</h2>
-              <h4 className="vertical-timeline-element-subtitle">
-                <a className="text-danger" href={item.website} target="_blank">
-                  {item.company}
-                </a>
-              </h4>
-              {item.workDescription.map((e) => (
-                <p key={e} className="text-sm-start">
-                  {e}
-                </p>
-              ))}
-            </VerticalTimelineElement>
-          ))}
-        </VerticalTimeline>
-      </Container>
+      <Experience heading={data.heading} experience={data.experiences}/>
     </>
   );
 };

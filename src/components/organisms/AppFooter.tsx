@@ -34,7 +34,7 @@ const AppFooter = () => {
   };
 
   return (
-    <>
+    <footer>
       <p className="text-muted lh-1 mb-2 fs-7">
         Built with&nbsp;
         <a
@@ -80,10 +80,10 @@ const AppFooter = () => {
           rel="noopener"
         />
       ))}
-      <p style={{fontSize: '0.85rem'}} className="text-muted fs-7 mt-n5 mb-0">
+      <p style={{ fontSize: "0.85rem" }} className="text-muted fs-7 mt-n5 mb-0">
         &copy; Copyright {new Date().getFullYear()}, All Rights Reserved
       </p>
-    </>
+    </footer>
   );
 };
 
