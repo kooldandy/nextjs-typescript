@@ -71,3 +71,10 @@ export interface IExperience {
   heading: string;
   experience: experienceType[];
 }
+
+export enum ApiNameEnum {
+  HOME = "home",
+  ABOUT = "about",
+  SKILLS = "skills",
+  EXPERIENCES = "experiences",
+}
