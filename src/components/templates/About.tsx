@@ -20,7 +20,7 @@ const About: FC<IAbout> = (props: IAbout) => {
             <Image src={profilePic} alt="Saurabh Ghosh" placeholder="blur" />
           </Col>
           <Col className={styles.introTextContainer}>
-            {about.map((data) => {
+            {about?.map((data) => {
               return (
                 <article key={data} className="mt-2">
                   <p className="px-3">{data}</p>

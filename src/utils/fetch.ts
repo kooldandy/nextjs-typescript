@@ -15,4 +15,4 @@ const fetchData = async (apiName: ApiNameEnum) => {
   }
 };
 
-export default fetchData;
+export {fetchData};

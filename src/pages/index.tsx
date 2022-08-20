@@ -1,8 +1,9 @@
 import Home from "@components/templates/Home";
 import { ApiNameEnum, IHome } from "@interfaces/index";
-import loadData from "@utils/fetch";
+import {fetchData} from "@utils/fetch";
 
 const IndexPage = (props: IHome) => {
+  console.log('props', props);
   return (
     <Home {...props}/>
   );
@@ -18,12 +19,12 @@ IndexPage.getTitle = () => {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const data = await loadData(ApiNameEnum.HOME);
+  const data = await fetchData(ApiNameEnum.HOME);
 
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
   return {
-    props: data
+    props: {props: data}
   }
 }
 
