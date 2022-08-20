@@ -17,12 +17,10 @@ const app = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getTitle = Component?.getTitle ?? ((title) => title);
   const title = getTitle(pageProps);
   const { props } = pageProps;
-  console.log("pageProps", pageProps, props);
-
   return (
     <Layout title={title}>
       {props && <Component {...props} />}
-      {!props && <NoData/>}
+      {!props && <NoData />}
     </Layout>
   );
 };
