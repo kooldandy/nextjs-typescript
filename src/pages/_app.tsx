@@ -3,6 +3,7 @@ import Layout from "@components/templates/Layout";
 import type { AppProps } from "next/app";
 import type { NextPage } from "next";
 import "@styles/global.scss";
+import NoData from "@components/molecules/NoData";
 
 type NextPageWithLayout = NextPage & {
   getTitle?: (title: string) => string;
@@ -15,13 +16,13 @@ type AppPropsWithLayout = AppProps & {
 const app = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getTitle = Component?.getTitle ?? ((title) => title);
   const title = getTitle(pageProps);
-  
-  const {props} = pageProps;
-  console.log('pageProps', pageProps, props)
+  const { props } = pageProps;
+  console.log("pageProps", pageProps, props);
+
   return (
     <Layout title={title}>
       {props && <Component {...props} />}
-      {!props && <h1>no data</h1>}
+      {!props && <NoData/>}
     </Layout>
   );
 };

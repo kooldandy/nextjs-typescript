@@ -3,7 +3,6 @@ import { ApiNameEnum, IHome } from "@interfaces/index";
 import {fetchData} from "@utils/fetch";
 
 const IndexPage = (props: IHome) => {
-  console.log('props', props);
   return (
     <Home {...props}/>
   );
