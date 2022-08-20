@@ -17,7 +17,7 @@ const About: FC<IAbout> = (props: IAbout) => {
           className={`${styles.about} mt-5 d-flex flex-wrap justify-content-center`}
         >
           <Col className={styles.introImageContainer}>
-            <Image src={profilePic} alt="Saurabh Ghosh" placeholder="blur" />
+            <Image src={profilePic} alt="Saurabh Ghosh" height={240} width={200} />
           </Col>
           <Col className={styles.introTextContainer}>
             {about?.map((data) => {

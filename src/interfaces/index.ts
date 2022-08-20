@@ -9,7 +9,7 @@ import { ReactNode } from "react";
 export interface IAbout {
   heading: string;
   about: string[];
-  profilePic: StaticImageData;
+  profilePic: string;
 }
 
 export enum HeadingEnum {
