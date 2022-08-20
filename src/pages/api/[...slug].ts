@@ -8,7 +8,8 @@ const handler = (request: NextApiRequest, response: NextApiResponse) => {
     const res = getData(slug[0]);
     response.status(200).json(res);
   } catch (err: any) {
-    response.status(500).json(null);
+    response.status(500).json({ statusCode: 500, message: err.message });
+    //response.status(500).json(null);
   }
 };
 
