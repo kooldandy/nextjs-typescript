@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Badge, Container, Row } from "react-bootstrap";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -71,16 +71,13 @@ const Experience: FC<IExperience> = (props: IExperience) => {
                   </article>
                 );
               })}
-                {item?.technology?.map((tech) => {
-                  return (
-                    <span
-                      key={tech}
-                      className="badge rounded-pill bg-success mx-1"
-                    >
-                      {tech}
-                    </span>
-                  );
-                })}
+              {item?.technology?.map((tech) => {
+                return (
+                  <Badge pill bg="primary" key={tech} className="mx-1">
+                    {tech}
+                  </Badge>
+                );
+              })}
             </section>
           </VerticalTimelineElement>
         ))}
