@@ -5,10 +5,10 @@ import { ApiNameEnum } from "@interfaces/index";
 const handler = (request: NextApiRequest, response: NextApiResponse) => {
   try {
     const { slug } = request.query;
-    const res = getData(slug[0]);
+    const res = getData(slug as string);
     response.status(200).json(res);
   } catch (err: any) {
-    response.status(500).json(null);
+    response.status(500).json({ statusCode: 500, message: err.message });
   }
 };
 
