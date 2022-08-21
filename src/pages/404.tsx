@@ -1,7 +1,21 @@
-import React from "react";
+import NotFound from "@components/templates/NotFound";
+import { ApiNameEnum, INotFound } from "@interfaces/index";
+import { fetchData } from "@utils/fetch";
+import Router from "next/router";
+import React, { useEffect } from "react";
 
-const Custom404 = (props: {message}) => {
-  return <h1>{props.message}</h1>;
+const Custom404 = (props: INotFound) => {
+  useEffect(() => {
+    setTimeout(() => {
+      Router.push(props.link);
+    }, 3000);
+  }, []);
+
+  return (
+    <>
+      <NotFound {...props} />
+    </>
+  );
 };
 
 Custom404.getTitle = () => {
@@ -9,12 +23,11 @@ Custom404.getTitle = () => {
 };
 
 export async function getStaticProps() {
-
-  const data = {message: '404 - Oops Page Not Found'}
+  const data = await fetchData(ApiNameEnum.NOTFOUND);
 
   return {
-    props: {props: data}
-  }
+    props: { props: data },
+  };
 }
 
 export default Custom404;
