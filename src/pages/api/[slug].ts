@@ -1,5 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { homeData, aboutData, skillsData, experienceData } from "@utils/site-data";
+import {
+  homeData,
+  aboutData,
+  skillsData,
+  experienceData,
+  notFound,
+} from "@utils/site-data";
 import { ApiNameEnum } from "@interfaces/index";
 
 const handler = (request: NextApiRequest, response: NextApiResponse) => {
@@ -22,6 +28,8 @@ const getData = (slug: string | ApiNameEnum) => {
       return skillsData;
     case ApiNameEnum.EXPERIENCES:
       return experienceData;
+    case ApiNameEnum.NOTFOUND:
+      return notFound;
     default:
       return null;
   }

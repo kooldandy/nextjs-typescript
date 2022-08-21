@@ -1,3 +1,4 @@
+import { INotFound } from './../interfaces/index';
 import { IHome, IAbout, ISkills, IExperience } from "@interfaces/index";
 
 export const homeData: IHome = {
@@ -258,3 +259,11 @@ export const experienceData: IExperience = {
     },
   ],
 };
+
+export const notFound: INotFound ={
+  h1: 'Oops!',
+  h2: '404 Not Found',
+  message: 'Sorry, an error has occured, Requested page not found!',
+  link: '/',
+  linkMessage:'Take Me Home', 
+}
