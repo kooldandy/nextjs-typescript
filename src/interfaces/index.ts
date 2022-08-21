@@ -9,7 +9,7 @@ import { ReactNode } from "react";
 export interface IAbout {
   heading: string;
   about: string[];
-  profilePic: StaticImageData;
+  profilePic: string;
 }
 
 export enum HeadingEnum {
@@ -70,4 +70,11 @@ type experienceType = {
 export interface IExperience {
   heading: string;
   experience: experienceType[];
+}
+
+export enum ApiNameEnum {
+  HOME = "home",
+  ABOUT = "about",
+  SKILLS = "skills",
+  EXPERIENCES = "experiences",
 }
