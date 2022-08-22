@@ -77,4 +77,13 @@ export enum ApiNameEnum {
   ABOUT = "about",
   SKILLS = "skills",
   EXPERIENCES = "experiences",
+  NOTFOUND = 'notfound',
+}
+
+export interface INotFound{
+  h1: string;
+  h2: string;
+  message: string;
+  link: string;
+  linkMessage:string; 
 }

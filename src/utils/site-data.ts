@@ -1,3 +1,4 @@
+import { INotFound } from './../interfaces/index';
 import { IHome, IAbout, ISkills, IExperience } from "@interfaces/index";
 
 export const homeData: IHome = {
@@ -9,9 +10,9 @@ export const homeData: IHome = {
 export const aboutData: IAbout = {
   heading: "Hey!👋 I'm Saurabh",
   about: [
-    "I'm a Senior Software Enginner at Nagarro, originally from Varanasi, India.",
+    "I'm a Senior Software Engineer at Nagarro, originally from Varanasi, India.",
     "A confident, professional, creative and resourceful person with the ability to work efficiently in fast-paced, multitasking environments, along with maintaining a positive attitude and strong work ethics.",
-    "My areas of interest lie in Frontend Development, Web developement, UI automation and DevOps. I have experience building enterprise grade WebApps and scalable frontend architectures.",
+    "My areas of interest lie in Frontend development, Web developement, UI automation and DevOps. I have experience in building enterprise grade WebApps and scalable frontend architectures.",
     "I also enjoy playing the table-tennis, vollyball, listening songs and playing video games.",
   ],
   profilePic: '/me.jpg'
@@ -258,3 +259,11 @@ export const experienceData: IExperience = {
     },
   ],
 };
+
+export const notFound: INotFound ={
+  h1: 'Oops!',
+  h2: '404 Not Found',
+  message: 'Sorry, an error has occured, Requested page not found!',
+  link: '/',
+  linkMessage:'Take Me Home', 
+}
