@@ -14,6 +14,7 @@ const Layout = ({ children, title }: Props) => {
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
+        <link rel="icon" href="/images/favicon_io/favicon.ico"></link>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="JavaScript wizard, chaotic good" />
         <meta
